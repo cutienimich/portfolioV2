@@ -367,17 +367,19 @@ nav ol li a:focus-visible{
   flex-direction: column;
   gap: 60px;
 }
+
 .about-video{
-    position: absolute;
-    right: 10rem;
-    top: 95rem;
-    width: 50rem;
-    
+  position: relative;
+  width: 100%;
+  max-width: 50rem;
+  aspect-ratio: 16 / 9;
+  margin: 0 0 0 auto;
 }
 
 .about-video video{
-  width:100% ;
+  width: 100%;
   height: 100%;
+  object-fit: cover;
   border-radius: var(--radius);
   border: 1px solid var(--border);
   display: block;
@@ -879,6 +881,8 @@ a:focus-visible,
 
 /* Large phone / small tablet */
 @media (max-width: 720px){
+  html, body{ overflow-x: hidden; max-width: 100%; }
+
   .sect, section{ padding: 60px 6vw; }
 
   nav{ padding: 10px; }
@@ -896,13 +900,21 @@ a:focus-visible,
     padding-top: 40px;
     text-align: left;
   }
-  .home-photo{ order: -1; margin-bottom: 10px; }
+  .home-photo{ order: -1; margin-bottom: 10px; max-width: 100%; }
   .home-photo img{ max-width: 260px; }
   .home-text h1{ font-size: 2.6rem; }
   .home-text > p:last-of-type{ font-size: 0.95rem; }
 
   .glass-morph{ grid-template-columns: repeat(2, 1fr); padding: 20px; }
   .skill img{ width: 30px; height: 30px; }
+
+  /* Video — full-width, in normal flow, no more absolute offset */
+  .about-video{
+    width: 100%;
+    max-width: 100%;
+    aspect-ratio: 16 / 9;
+    margin: 12px 0 0;
+  }
 
   #skills{ gap: 10px; }
   #skills .logo{ width: 80px; padding: 12px 8px; }
@@ -914,7 +926,9 @@ a:focus-visible,
 
   .carousel-viewport{ max-width: 260px; }
   .carousel-btn{ width: 36px; height: 36px; font-size: 0.85rem; }
-  .carousel-slide{ padding: 24px 18px; }
+  .carousel-slide{ padding: 24px 18px; min-height: 320px; gap: 14px; }
+  .carousel-slide h5{ font-size: 1.2rem; }
+  .carousel-slide p{ font-size: 0.85rem; }
   .carousel-slide img{ height: 110px; }
 
   #contact-form{ padding: 20px; }
@@ -939,6 +953,9 @@ a:focus-visible,
   nav ol li a{ padding: 6px 9px; font-size: 0.65rem; }
   .glass-morph{ grid-template-columns: repeat(2, 1fr); gap: 10px; }
   #skills .logo{ width: 72px; }
+
+  .about-video{ aspect-ratio: 4 / 3; }
+  .carousel-slide{ min-height: 280px; padding: 18px 12px; }
 }
 
 @media (prefers-reduced-motion: reduce){
