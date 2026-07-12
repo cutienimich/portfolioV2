@@ -924,12 +924,27 @@ a:focus-visible,
   #project{ grid-template-columns: 1fr; }
   .proj-con img, #project > a img{ height: 180px; }
 
-  .carousel-viewport{ max-width: 260px; }
-  .carousel-btn{ width: 36px; height: 36px; font-size: 0.85rem; }
-  .carousel-slide{ padding: 24px 18px; min-height: 320px; gap: 14px; }
+ .carousel{
+    gap: 12px;
+  }
+  .carousel-viewport{
+    width: 100%;
+    max-width: none;
+  }
+  .carousel-slide{
+    width: 100%;
+    min-width: 0;
+    box-sizing: border-box;
+    padding: 24px 18px;
+    min-height: 320px;
+    gap: 14px;
+  }
   .carousel-slide h5{ font-size: 1.2rem; }
   .carousel-slide p{ font-size: 0.85rem; }
-  .carousel-slide img{ height: 110px; }
+  .carousel-slide img{ height: 110px; max-width: 100%; }
+
+  .carousel-btn{ width: 36px; height: 36px; font-size: 0.85rem; flex-shrink: 0; }
+}
 
   #contact-form{ padding: 20px; }
   #Contact > .contact-pill,
@@ -945,6 +960,7 @@ a:focus-visible,
     grid-column: 1;
     grid-row: auto;
   }
+  .about-video{display:none}
 }
 
 /* Small phone */
@@ -956,6 +972,8 @@ a:focus-visible,
 
   .about-video{ aspect-ratio: 4 / 3; }
   .carousel-slide{ min-height: 280px; padding: 18px 12px; }
+    .about-video{display:none}
+      .about-video{display:none}
 }
 
 @media (prefers-reduced-motion: reduce){
