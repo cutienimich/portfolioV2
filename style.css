@@ -960,7 +960,7 @@ a:focus-visible,
     grid-column: 1;
     grid-row: auto;
   }
-  .about-video{display:none}
+  
 }
 
 /* Small phone */
@@ -973,7 +973,7 @@ a:focus-visible,
   .about-video{ aspect-ratio: 4 / 3; }
   .carousel-slide{ min-height: 280px; padding: 18px 12px; }
     .about-video{display:none}
-      .about-video{display:none}
+    
 }
 
 @media (prefers-reduced-motion: reduce){
