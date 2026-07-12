@@ -1,0 +1,7 @@
+body {
+    text-align: center;
+    ovrflow:hidden;
+}
+#board {
+    background-color:black;
+}
