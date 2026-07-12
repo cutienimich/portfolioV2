@@ -370,9 +370,9 @@ nav ol li a:focus-visible{
 .about-video{
     position: absolute;
     right: 10rem;
-    top: 86rem;
+    top: 95rem;
     width: 50rem;
-    height: 40rem;
+    
 }
 
 .about-video video{
